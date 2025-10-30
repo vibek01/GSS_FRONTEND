@@ -1,45 +1,35 @@
 import React from 'react';
 import { Section } from '../components/Section';
 import { Card } from '../components/Card';
-import { GraduationCap, Users, Laptop, Heart, Leaf, BookOpen } from 'lucide-react';
+// MODIFICATION: Updated the icons to match the new content
+import { Briefcase, Sparkles, Wrench, Leaf } from 'lucide-react';
 
 export const Work: React.FC = () => {
+  // MODIFICATION: Replaced the old programs with the new ones you requested.
   const programs = [
     {
-      icon: <GraduationCap className="text-[#1E3A8A]" size={36} />,
-      title: 'Vocational Training',
-      description: 'Hands-on skill development programs in tailoring, handicrafts, carpentry, and other trades to enhance employability and promote self-employment.',
-      image: 'https://images.pexels.com/photos/7972721/pexels-photo-7972721.jpeg?auto=compress&cs=tinysrgb&w=600',
+      icon: <Briefcase className="text-[#1E3A8A]" size={36} />,
+      title: 'Rojgar Mela Participation',
+      description: 'We actively participate in and organize Rojgar Melas, creating a vital platform to connect local youth with employers and meaningful job opportunities.',
+      image: '/work-rojgar-mela.png', // Image from the 'public' folder
     },
     {
-      icon: <Laptop className="text-[#1E3A8A]" size={36} />,
-      title: 'Digital Literacy',
-      description: 'Computer basics, internet usage, and digital tools training to bridge the digital divide and prepare community members for the modern economy.',
-      image: 'https://images.pexels.com/photos/5905445/pexels-photo-5905445.jpeg?auto=compress&cs=tinysrgb&w=600',
+      icon: <Sparkles className="text-[#1E3A8A]" size={36} />,
+      title: 'Swachh Bharat Abhiyan',
+      description: 'Our volunteers and community members regularly organize cleanliness drives, promoting hygiene and contributing to the national Swachh Bharat mission.',
+      image: '/work-swachh-bharat.png', // Image from the 'public' folder
     },
     {
-      icon: <Heart className="text-[#1E3A8A]" size={36} />,
-      title: 'Health Awareness',
-      description: 'Regular health camps, nutrition education, hygiene workshops, and awareness programs on preventive healthcare and wellness.',
-      image: 'https://images.pexels.com/photos/6646917/pexels-photo-6646917.jpeg?auto=compress&cs=tinysrgb&w=600',
-    },
-    {
-      icon: <Users className="text-[#1E3A8A]" size={36} />,
-      title: 'Women Empowerment',
-      description: 'Leadership training, financial literacy, and support groups focused on enhancing women\'s participation in economic and social activities.',
-      image: 'https://images.pexels.com/photos/3184611/pexels-photo-3184611.jpeg?auto=compress&cs=tinysrgb&w=600',
+      icon: <Wrench className="text-[#1E3A8A]" size={36} />,
+      title: 'Skill India Training',
+      description: 'In alignment with the Skill India mission, our centers provide certified training in various trades, empowering individuals with job-ready, practical skills.',
+      image: '/work-skill-india.png', // Image from the 'public' folder
     },
     {
       icon: <Leaf className="text-[#1E3A8A]" size={36} />,
-      title: 'Sustainable Agriculture',
-      description: 'Organic farming techniques, water conservation methods, and sustainable practices to support local farmers and promote food security.',
-      image: 'https://images.pexels.com/photos/2132250/pexels-photo-2132250.jpeg?auto=compress&cs=tinysrgb&w=600',
-    },
-    {
-      icon: <BookOpen className="text-[#1E3A8A]" size={36} />,
-      title: 'Adult Education',
-      description: 'Literacy programs and continuing education opportunities for adults who missed formal schooling, promoting lifelong learning.',
-      image: 'https://images.pexels.com/photos/8612992/pexels-photo-8612992.jpeg?auto=compress&cs=tinysrgb&w=600',
+      title: 'Practical Gardening Training',
+      description: 'We conduct hands-on gardening and organic farming workshops, teaching sustainable practices that promote community self-reliance and food security.',
+      image: '/work-gardening.png', // Image from the 'public' folder
     },
   ];
 
@@ -53,6 +43,10 @@ export const Work: React.FC = () => {
         </p>
       </div>
 
+      {/* MODIFICATION: This grid will now display 4 items. 
+          The layout adjusts automatically. On large screens, it will show 3 items in the first row and 1 in the second.
+          If you prefer a 2x2 grid, you can change `lg:grid-cols-3` to `lg:grid-cols-4` or `md:grid-cols-2`.
+      */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {programs.map((program, index) => (
           <Card key={index} hover className="overflow-hidden p-0">
@@ -73,6 +67,7 @@ export const Work: React.FC = () => {
         ))}
       </div>
 
+      {/* This "Impact By Numbers" section remains unchanged, as requested. */}
       <div className="mt-16 bg-[#F9FAFB] rounded-lg p-8 text-center">
         <h3 className="text-2xl font-bold text-[#111827] mb-4">Impact By Numbers</h3>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-8">

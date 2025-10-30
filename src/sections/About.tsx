@@ -28,7 +28,6 @@ export const About: React.FC = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-20">
         
         {/* Left Column: Text Content */}
-        {/* On mobile (order-2), this text will appear below the image */}
         <div className="order-2 lg:order-1">
           <h2 className="text-3xl sm:text-4xl font-bold text-[#111827] mb-4 text-center lg:text-left">
             About Us
@@ -43,13 +42,27 @@ export const About: React.FC = () => {
         </div>
 
         {/* Right Column: Image */}
-        {/* On mobile (order-1), this image will appear on top */}
         <div className="order-1 lg:order-2">
-          <img
-            src="/group-photo.png" // Directly referencing the image from the 'public' folder
-            alt="Members and beneficiaries of Gyana Shree Social Society"
-            className="rounded-xl shadow-2xl w-full h-auto object-cover transition-all duration-500 ease-in-out transform hover:scale-105 hover:shadow-primary/20"
-          />
+          {/* 
+            MODIFICATION:
+            1. This container now acts as a "frame" for the image.
+            2. `overflow-hidden` is crucial—it hides the parts of the scaled-up image that are outside this frame.
+            3. The shadow and border-radius are applied here to keep the frame consistent.
+          */}
+          <div className="rounded-xl shadow-2xl overflow-hidden">
+            <img
+              src="/group-photo.png"
+              alt="Members and beneficiaries of Gyana Shree Social Society"
+              /*
+                MODIFICATION:
+                1. `scale-110`: This permanently zooms the image to 110% of its container size, cropping the edges. 
+                   You can adjust this value (e.g., `scale-105`, `scale-125`) if needed.
+                2. `hover:scale-125`: The hover effect is adjusted to zoom in even further for a nice interactive feel.
+                3. `rounded-xl` and `shadow-2xl` were removed from here and moved to the parent div.
+              */
+              className="w-full h-auto object-cover transition-all duration-500 ease-in-out transform scale-110 hover:scale-125"
+            />
+          </div>
         </div>
       </div>
 
@@ -58,7 +71,7 @@ export const About: React.FC = () => {
         {values.map((value, index) => (
           <Card 
             key={index} 
-            hover // This prop enables the hover effect from your Card component
+            hover
             className="text-center transition-transform duration-300 ease-in-out hover:-translate-y-2"
           >
             <div className="flex justify-center mb-4">{value.icon}</div>
