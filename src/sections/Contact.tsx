@@ -51,17 +51,17 @@ export const Contact: React.FC = () => {
     {
       icon: <MapPin className="text-[#2C5F2D]" size={24} />,
       title: 'Visit Us',
-      details: ['Village Road, Near Community Center', 'District, State - 751024'],
+      details: ['Nutan Nagar, Near ABC CAR ZONE, Agartala, Tripura - 799009'],
     },
     {
       icon: <Phone className="text-[#2C5F2D]" size={24} />,
       title: 'Call Us',
-      details: ['+91 98765 43210', '+91 98765 43211'],
+      details: ['+91 60092 33749', '+91 70855 90477'],
     },
     {
       icon: <Mail className="text-[#2C5F2D]" size={24} />,
       title: 'Email Us',
-      details: ['info@gyanashree.org', 'contact@gyanashree.org'],
+      details: ['gyanashreesocialsociety@gmail.com', 'sagarprasadbin@gmail.com'],
     },
   ];
 

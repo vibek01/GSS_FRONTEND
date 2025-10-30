@@ -21,17 +21,16 @@ export const Footer: React.FC = () => {
               <div className="flex items-start space-x-3">
                 <MapPin size={18} className="mt-1 flex-shrink-0" />
                 <span className="text-white/90 text-sm">
-                  Village Road, Near Community Center<br />
-                  District, State - 751024
+                  Nutan Nagar, Near ABC CAR ZONE, Agartala, Tripura - 799009
                 </span>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone size={18} className="flex-shrink-0" />
-                <span className="text-white/90 text-sm">+91 98765 43210</span>
+                <span className="text-white/90 text-sm">+91 60092 33749</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail size={18} className="flex-shrink-0" />
-                <span className="text-white/90 text-sm">info@gyanashree.org</span>
+                <span className="text-white/90 text-sm">gyanashreesocialsociety@gmail.com</span>
               </div>
             </div>
           </div>

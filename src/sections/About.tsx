@@ -85,7 +85,7 @@ export const About: React.FC = () => {
       <div className="mt-20 bg-white rounded-lg p-8 lg:p-12 shadow-lg">
         <h3 className="text-2xl font-bold text-[#111827] mb-4 text-center sm:text-left">Our Story</h3>
         <p className="text-[#4B5563] leading-relaxed mb-4 text-justify">
-          Founded in 2018, Gyana Shree Social Society emerged from a small group of dedicated
+          Founded in 2011, Gyana Shree Social Society emerged from a small group of dedicated
           community members who recognized the critical need for accessible education and skill
           development in underserved areas. What started as informal weekend training sessions has
           grown into a comprehensive community development initiative.
